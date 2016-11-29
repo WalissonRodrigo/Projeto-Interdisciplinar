@@ -66,7 +66,7 @@ WSGI_APPLICATION = 'simplemooc.wsgi.application'
 
 LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
@@ -83,16 +83,17 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'simplemooc', 'media')
 MEDIA_URL = '/media/'
 
-# E-mails
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-DEFAULT_FROM_EMAIL = 'Nome <email@gmail.com>'
-# EMAIL_USE_TLS = True
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_HOST_USER = 'email@gmail.com'
-# EMAIL_HOST_PASSWORD = 'senha'
-# EMAIL_PORT = 587
+#envio de emails
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'Simplemooc <simplemooc@outlook.com>'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.live.com'
+EMAIL_HOST_USER = 'simplemooc@outlook.com'
+EMAIL_HOST_PASSWORD = 'simple123'
+EMAIL_PORT = ''
 
-CONTACT_EMAIL = 'contato@simplemooc.com'
+CONTACT_EMAIL = 'simplemooc@outlook.com'
 
 # Auth
 LOGIN_URL = 'accounts:login'
