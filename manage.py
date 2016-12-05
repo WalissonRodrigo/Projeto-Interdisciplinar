@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env python
 import os
 import sys
@@ -20,3 +21,15 @@ if __name__ == "__main__":
             )
         raise
     execute_from_command_line(sys.argv)
+=======
+#!/usr/bin/env python
+import os
+import sys
+
+if __name__ == "__main__":
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "simplemooc.settings")
+
+    from django.core.management import execute_from_command_line
+
+    execute_from_command_line(sys.argv)
+>>>>>>> f2e683044aaafdb905a72a34bad0582a9ae5a7ed

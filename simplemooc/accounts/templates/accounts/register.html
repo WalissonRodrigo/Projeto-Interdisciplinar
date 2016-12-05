@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends "base.html" %}
 
 {% block content %}
@@ -24,4 +25,32 @@
         </form>
     </div>
 </div>
+=======
+{% extends "base.html" %}
+
+{% block content %}
+<div class="pure-g-r content-ribbon">
+    <div class="pure-u-1">
+        <h2>Informe seus dados</h2>
+        <form class="pure-form pure-form-stacked" method="post">
+            {% csrf_token %}
+            <fieldset>
+                {{ form.non_field_errors }}
+
+                {% for field in form %}
+                <div class="pure-control-group">
+                    {{ field.label_tag }}
+                    {{ field }}
+                    {{ field.errors }}
+                </div>
+                {% endfor %}
+
+                <div class="pure-controls">
+                    <button type="submit" class="pure-button pure-button-primary">Cadastrar</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+>>>>>>> f2e683044aaafdb905a72a34bad0582a9ae5a7ed
 {% endblock %}

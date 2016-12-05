@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from django.db import models
 
 # Create your models here.
@@ -26,3 +27,8 @@ class Empresa(models.Model):
         verbose_name = 'Empresa'
         verbose_name_plural = 'Empresas'
         ordering = ['razao']
+=======
+from django.db import models
+
+# Create your models here.
+>>>>>>> f2e683044aaafdb905a72a34bad0582a9ae5a7ed
